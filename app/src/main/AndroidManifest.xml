@@ -12,7 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskMaster"
         tools:targetApi="31">
-
+        <activity
+            android:name=".SignUpscreen"
+            android:exported="false" />
+        <activity
+            android:name=".singUpactivity"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -22,10 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
