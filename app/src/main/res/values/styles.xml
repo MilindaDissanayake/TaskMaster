@@ -1,0 +1,6 @@
+<resources>
+    <!-- Custom AlertDialog style -->
+    <style name="CustomAlertDialog" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/dialogTitleColor</item>
+    </style>
+</resources>

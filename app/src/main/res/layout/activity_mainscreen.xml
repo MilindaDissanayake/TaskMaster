@@ -50,6 +50,7 @@
                 android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/btnUserinfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -69,6 +70,7 @@
                 android:src="@drawable/ic_profile" />
 
             <TextView
+                android:id="@+id/textemailUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -107,7 +109,7 @@
 
             <ImageView
 
-                android:id="@+id/addNewTaskButton"
+                android:id="@+id/btnNewTaskButton"
                 android:layout_width="38dp"
                 android:layout_height="29dp"
                 android:layout_gravity="center_vertical"
