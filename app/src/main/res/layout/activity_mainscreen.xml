@@ -166,17 +166,8 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
 
-
     </LinearLayout>
-
-    <!-- Info Button -->
-
-    <!-- Add New Task Button -->
-
-    <!-- Current Task Section -->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
