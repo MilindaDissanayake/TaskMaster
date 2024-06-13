@@ -38,6 +38,17 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="90dp"
                 android:src="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/textemailUp"                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="Hello peter parker"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -84,7 +95,7 @@
 
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -94,11 +105,19 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/Developerinfo"
+                android:layout_width="272dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="192dp"
+                android:text="developer info" />
+
+            <Button
                 android:id="@+id/btnEditinfo"
                 android:layout_width="272dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="8dp"
                 android:text="Edit info" />
 
             <Button
