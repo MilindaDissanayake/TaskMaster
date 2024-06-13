@@ -43,40 +43,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        Login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                String email = Email.getText().toString();
-//                String pass = Password.getText().toString();
-//
-//                if (email.isEmpty() || pass.isEmpty()) {
-//                    Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
-//                String registeredUser = sharedPreferences.getString("Email", "");
-//                String registeredPass = sharedPreferences.getString("Password", "");
-//                String registerUsername = sharedPreferences.getString("Username", "");
-//
-//                if (email.equals(registeredUser) && pass.equals(registeredPass)) {
-//                    Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
-//                    SharedPreferences.Editor editor = sharedPreferences.edit();
-//                    editor.putBoolean("LoggedIn", true);
-//                    editor.apply();
-//
-//                    Intent intent=new Intent(MainActivity.this, main_screen.class);
-//                    intent.putExtra("Email", email);
-//                    intent.putExtra("Username", registerUsername);
-//                    startActivity(intent);
-//                    finish();
-//                } else {
-//                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
-//                }
-//
-//            }
-//        });
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String email = Email.getText().toString();
+                String pass = Password.getText().toString();
+
+                if (email.isEmpty() || pass.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "All fields are required", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE);
+                String registeredUser = sharedPreferences.getString("Email", "");
+                String registeredPass = sharedPreferences.getString("Password", "");
+                String registerUsername = sharedPreferences.getString("Username", "");
+
+                if (email.equals(registeredUser) && pass.equals(registeredPass)) {
+                    Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("LoggedIn", true);
+                    editor.apply();
+
+                    Intent intent=new Intent(MainActivity.this, mainscreen.class);
+                    intent.putExtra("Email", email);
+                    intent.putExtra("Username", registerUsername);
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
 
     }

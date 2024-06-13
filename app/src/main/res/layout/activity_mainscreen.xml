@@ -13,82 +13,159 @@
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/profileSection"
+        app:layout_constraintTop_toTopOf="@+id/profileSection"
         app:srcCompat="@drawable/texture" />
 
     <LinearLayout
+        android:id="@+id/profileSection"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/main_screen_top_tab"
+            android:layout_height="330dp"
+            android:background="@drawable/profile_top_back"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="end"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/infoButton"
+            <LinearLayout
+                android:layout_width="37dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/profileSection"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="26dp"
+                android:background="@drawable/info_bitton"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/button_background"
-                    android:text="info" />
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=" info"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
 
             </LinearLayout>
-
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="161dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/ic_profile" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:text="Hello peter parker"
                 android:textColor="@android:color/black"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="" />
-            </LinearLayout>
 
         </LinearLayout>
 
-        <Button
+        <!-- Add New Task Button -->
+        <LinearLayout
             android:id="@+id/addNewTaskButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
+            android:layout_width="343dp"
+            android:layout_height="63dp"
+            android:layout_below="@id/profileSection"
             android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@drawable/button_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
-            android:text="Add new task" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:gravity="center"
+                android:text="Add new task"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="29dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_add_task" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="343dp"
+            android:layout_height="444dp"
+            android:layout_below="@id/profileSection"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_background"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="current task"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ListView
+                    android:id="@+id/todoitemlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dividerHeight="3dp"
+                    tools:listitem="@layout/list_item">
+
+                </ListView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
